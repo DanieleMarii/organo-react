@@ -6,7 +6,7 @@ class ListaSuspensa extends Component {
         return(
             <div className='lista-suspensa'>
                 <label>{this.props.label}</label>
-                <select>
+                <select required={this.props.required}>
                     {this.props.itens.map(item => <option key={item}>{item}</option>)}
                 </select>
             </div>
