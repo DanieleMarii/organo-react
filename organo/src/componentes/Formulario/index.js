@@ -1,9 +1,18 @@
 import React, {Component} from 'react';
 import CampoTexto from '../CampoTexto';
+import ListaSuspensa from '../ListaSuspensa';
 import './Formulario.css'
 
 class Formulario extends Component{
     render(){
+        const times = [
+            'Programação',
+            'Front-end',
+            'Devops',
+            'UX e design',
+            'Mobile',
+            'Inovação e Gestão'
+        ]
         return(
             <section className='formulario'>
                 <form action="">
@@ -11,6 +20,7 @@ class Formulario extends Component{
                     <CampoTexto label="Nome" placeholder="Digite seu nome"/>
                     <CampoTexto label="Cargo" placeholder="Digite seu cargo"/>
                     <CampoTexto label="Imagem" placeholder="Digite o endereço da imagem"/>
+                    <ListaSuspensa label="Time" itens={times}/>
                 </form>
             </section>
         )
