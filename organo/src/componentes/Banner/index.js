@@ -1,16 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Banner.css'
 
-class Banner extends Component {
-    render(){
-    // jsx 
+function Banner(){
     return(
         <header className='banner'>
             <img src="/imagens/banner.png" alt="Banner principal da página do organo"/>
         </header>
         
     );
-    }
 }
 
 export default Banner;

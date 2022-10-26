@@ -1,17 +1,15 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './ListaSuspensa.css'
 
-class ListaSuspensa extends Component {
-    render(){
-        return(
-            <div className='lista-suspensa'>
-                <label>{this.props.label}</label>
-                <select required={this.props.required}>
-                    {this.props.itens.map(item => <option key={item}>{item}</option>)}
-                </select>
-            </div>
-        )
-    }
+function ListaSuspensa(props){
+    return(
+        <div className='lista-suspensa'>
+            <label>{props.label}</label>
+            <select onChange={evento => props.aoAlterado(evento.target.value)} required={props.required} value={props.value}>
+                {props.itens.map(item => <option key={item}>{item}</option>)}
+            </select>
+        </div>
+    )
 }
 
 export default ListaSuspensa
