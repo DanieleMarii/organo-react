@@ -1,4 +1,5 @@
 import React from 'react'
+import Colaborador from '../Colaborador'
 import './Time.css'
 
 function Time(props){
@@ -8,6 +9,7 @@ function Time(props){
         
         <section className='time' style={corFundo}>
             <h3 style={corBorda}>{props.nome}</h3>
+            <Colaborador/>
         </section>
     )
 }
